@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace buttons
 {
-  public partial class Form1 : Form
-  {
-    public Form1()
+    public partial class Form1 : Form
     {
-      InitializeComponent();
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (this.button1.Top > 10)
+            {
+                this.button1.Top -= 10;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.button2.Bottom < this.Height - 10)
+            {
+                this.button2.Top += 10;
+            }
+        }
     }
-  }
 }
